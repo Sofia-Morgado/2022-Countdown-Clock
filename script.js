@@ -29,3 +29,34 @@ function calculateDate(){
 
 // For every second, it will update the date    
 setInterval(function(){calculateDate()}, 1000);
+
+
+
+class Modal{
+    constructor(){
+        this.modal = document.querySelector(".my-modal");
+    }
+
+    close(){
+        this.modal.style.display = "none";
+    }
+
+    open(){
+        this.modal.style.display = "block";
+    }
+}
+
+var modal = new Modal();
+
+const openBtn = document.querySelector(".js-open-modal");
+const closeBtn = document.querySelector(".js-close-modal");
+
+openBtn.addEventListener('click', function(event){
+    modal.open();
+})
+
+closeBtn.addEventListener('click', function(event){
+    modal.close();
+})
+
+
